@@ -113,8 +113,3 @@ MIT
 [joel@boltzmann.co](mailto:yourname@youremail.com)
 
 ```
-
----
-
-Let me know if you want this split into actual project files (`run_agent.py`, `tools/`, etc.) or Dockerized.
-```

@@ -48,11 +48,33 @@ python main.py.py
 
 ```mermaid
 flowchart TD
-  A[Compound Input] --> B[Biocatalytic Routes]
-  B --> C[EC Prediction] --> D[Enzyme Sequences]
-  D --> E[Condition Prediction]
-  E --> F[Patent Search]
-  F --> G[Final Summary]
+    start([_start_])
+    end([_end_])
+
+    start --> greet_and_route
+    greet_and_route --> get_compound_info
+    greet_and_route --> ask_for_standard_synthesis
+    greet_and_route --> other_tools
+    greet_and_route --> end
+
+    get_compound_info --> ask_user
+    ask_user --> bio_reactions
+    bio_reactions --> select_reactions
+    select_reactions --> ec_number
+    ec_number --> enzyme_lookup
+    enzyme_lookup --> search_patents
+
+    bio_reactions --> ask_for_standard_synthesis
+    ask_user --> ask_for_standard_synthesis
+
+    other_tools --> get_atom_mapping
+    get_atom_mapping --> recommend_conditions
+    recommend_conditions --> search_patents
+
+    ask_for_standard_synthesis --> other_tools
+
+    search_patents --> summarize_and_restart
+    summarize_and_restart --> greet_and_route
 ```
 
 ---

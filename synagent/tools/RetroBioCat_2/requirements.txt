@@ -1,0 +1,16 @@
+# rdkit>=2021.03.5
+# scikit-learn>=1.0.0
+tensorflow>=2.6.0,<=2.8.0
+pytest
+sqlalchemy
+six
+pandas
+openpyxl
+tables
+PyYAML
+jupyter
+tqdm
+gdown
+mkdocs
+protobuf<=3.20.3
+# numpy==1.26.4

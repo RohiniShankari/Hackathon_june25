@@ -1,0 +1,10 @@
+C C ( = O ) O C ( C ) = O . O = C 1 C = C C = C C 1 C ( = O ) O
+C C ( = O ) O C ( C ) = O . O c 1 c c c c c 1 C ( = O ) O
+C C ( = O ) O C ( C ) = O . O C 1 = C C = C C = C 1 C ( = O ) O
+C C ( = O ) O C ( C ) = O . O = C 1 C C = C C = C 1 C ( = O ) O
+C C ( = O ) O C ( C ) = O . O = C 1 C C C C C 1 C ( = O ) O
+C C ( = O ) O C ( C ) = O . O = C 1 C C C C = C 1 C ( = O ) O
+C C ( = O ) Cl . O c 1 c c c c c 1 C ( = O ) O
+C C ( = O ) O C 1 = C C = C C = C 1 C ( = O ) O C ( C ) = O
+C C ( = O ) O C ( C ) = O . O = C 1 C = C C = C C 1 C ( = O ) [O-]
+C C ( = O ) O C ( C ) = O . O = C 1 C C C C = C 1 C ( = O ) [O-]

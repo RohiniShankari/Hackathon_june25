@@ -1,0 +1,10 @@
+C C ( = O ) C ( = O ) O . C ( Br ) c 1 c c c c c 1
+C C ( = O ) C ( = O ) O . C ( O ) c 1 c c c c c 1
+C C ( = O ) C ( = O ) O . C ( Cl ) c 1 c c c c c 1
+C C ( = O ) C ( = O ) O . O C c 1 c c c c c 1
+C C ( O ) C ( = O ) O C c 1 c c c c c 1
+C C ( = O ) C ( = O ) [O-] . C ( Cl ) c 1 c c c c c 1
+C C ( = O ) C ( = O ) [O-] . C ( Br ) c 1 c c c c c 1
+C C ( = O ) C ( = O ) O C C . c 1 c c c c ( C O ) c 1
+C C ( = O ) C ( = O ) O . C c 1 c c c c c 1
+C C ( = O ) C ( = O ) O C C . c 1 c c c c ( C Br ) c 1

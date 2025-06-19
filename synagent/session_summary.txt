@@ -1,0 +1,44 @@
+# Retrosynthesis Summary for Aspirin
+
+## Target Compound
+- Name: Aspirin (acetylsalicylic acid)
+- SMILES: CC(=O)OC1=CC=CC=C1C(=O)O
+- Description: White, crystalline organic acid with anti-inflammatory properties (NSAID)
+
+## Analysis Preferences
+- Biocatalysis was preferred in the analysis
+
+## Predicted Reactions
+Four potential retrosynthetic pathways were identified:
+
+1. Aldehyde oxidation:
+   - SMILES: CC(=O)Oc1ccccc1C=O → CC(=O)OC1=CC=CC=C1C(=O)O
+   - Top EC numbers: 
+     * EC:4.1.1 (0.85)
+     * EC:4.4.1 (0.61)
+     * EC:4.2.1 (0.59)
+
+2. Amide hydrolysis:
+   - SMILES: CNC(=O)c1ccccc1OC(C)=O → CC(=O)OC1=CC=CC=C1C(=O)O
+   - Top EC numbers:
+     * EC:3.4.19 (0.98)
+     * EC:3.5.1 (0.97)
+
+3. Methyl ester hydrolysis:
+   - SMILES: COC(=O)c1ccccc1OC(C)=O → CC(=O)OC1=CC=CC=C1C(=O)O
+   - Top EC numbers:
+     * EC:3.1.1 (0.99)
+     * EC:2.3.1 (0.48)
+
+4. Nitrile hydrolysis:
+   - SMILES: CC(=O)Oc1ccccc1C#N → CC(=O)OC1=CC=CC=C1C(=O)O
+   - Top EC numbers:
+     * EC:3.5.5 (0.99)
+
+## Limitations of Analysis
+- No specific enzyme sequences were provided
+- No atom mappings were included
+- No reaction conditions were specified
+- No patent information was included
+
+Note: The confidence scores (in parentheses) indicate the probability of the EC number being relevant for each transformation.

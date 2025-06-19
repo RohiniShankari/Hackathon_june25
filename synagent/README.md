@@ -48,8 +48,8 @@ python main.py.py
 
 ```mermaid
 flowchart TD
-    start([_start_])
-    end([_end_])
+    start("[_start_]")
+    end("[_end_]")
 
     start --> greet_and_route
     greet_and_route --> get_compound_info

@@ -110,8 +110,7 @@ MIT
 
 ## 📬 Contact
 
-[yourname@youremail.com](mailto:yourname@youremail.com)
-[yourdomain.co](https://yourdomain.co)
+[joel@boltzmann.co](mailto:yourname@youremail.com)
 
 ```
 

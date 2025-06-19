@@ -68,7 +68,6 @@ flowchart TD
     start_node --> greet_and_route
     greet_and_route --> get_compound_info
     greet_and_route --> ask_for_standard_synthesis
-    greet_and_route --> other_tools
     greet_and_route --> end_node
 
     get_compound_info --> ask_user

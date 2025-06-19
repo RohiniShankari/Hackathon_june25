@@ -48,8 +48,8 @@ python main.py.py
 
 ```mermaid
 flowchart TD
-    start(["__start__"])
-    end(["__end__"])
+    start_node(["__start__"])
+    end_node(["__end__"])
 
     greet_and_route(["greet_and_route"])
     get_compound_info(["get_compound_info"])
@@ -65,11 +65,11 @@ flowchart TD
     search_patents(["search_patents"])
     summarize_and_restart(["summarize_and_restart"])
 
-    start --> greet_and_route
+    start_node --> greet_and_route
     greet_and_route --> get_compound_info
     greet_and_route --> ask_for_standard_synthesis
     greet_and_route --> other_tools
-    greet_and_route --> end
+    greet_and_route --> end_node
 
     get_compound_info --> ask_user
     ask_user --> bio_reactions
@@ -89,6 +89,7 @@ flowchart TD
 
     search_patents --> summarize_and_restart
     summarize_and_restart --> greet_and_route
+
 
 ```
 

@@ -1,0 +1,7 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=chr17,length=83257441>
+##INFO=<ID=SpliceAI,Number=.,Type=String,Description="SpliceAIv1.3.1 variant annotation. These include delta scores (DS) and delta positions (DP) for acceptor gain (AG), acceptor loss (AL), donor gain (DG), and donor loss (DL). Format: ALLELE|SYMBOL|DS_AG|DS_AL|DS_DG|DS_DL|DP_AG|DP_AL|DP_DG|DP_DL">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr17	7676383	.	A	C	.	.	SpliceAI=C|TP53|0.00|0.00|0.00|0.00|20|49|5|-1
+chr17	7676403	.	T	A	.	.	SpliceAI=A|TP53|0.00|0.01|0.00|0.00|22|0|2|-21

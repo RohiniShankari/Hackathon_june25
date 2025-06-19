@@ -1,0 +1,51 @@
+
+---
+
+### ✅ `.gitignore`
+
+```gitignore
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Environment and system files
+*.env
+*.DS_Store
+*.egg-info/
+*.log
+*.swp
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Conda environment or virtualenvs
+.env/
+.venv/
+env/
+venv/
+*.conda
+
+# VSCode settings
+.vscode/
+
+# Data & output files
+data/
+
+# AWS credentials or secrets (never commit)
+*.pem
+*.key
+.aws/
+
+# Python packaging
+build/
+dist/
+
+# Gradio session data
+gradio_cached_examples/
+
+# Model cache
+__pycache__/
+.cache/
+*.pt
+*.h5
+*.ckpt

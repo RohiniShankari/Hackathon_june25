@@ -48,8 +48,22 @@ python main.py.py
 
 ```mermaid
 flowchart TD
-    start("[_start_]")
-    end("[_end_]")
+    start(["__start__"])
+    end(["__end__"])
+
+    greet_and_route(["greet_and_route"])
+    get_compound_info(["get_compound_info"])
+    ask_user(["ask_user"])
+    bio_reactions(["bio_reactions"])
+    select_reactions(["select_reactions"])
+    ec_number(["ec_number"])
+    enzyme_lookup(["enzyme_lookup"])
+    ask_for_standard_synthesis(["ask_for_standard_synthesis"])
+    other_tools(["other_tools"])
+    get_atom_mapping(["get_atom_mapping"])
+    recommend_conditions(["recommend_conditions"])
+    search_patents(["search_patents"])
+    summarize_and_restart(["summarize_and_restart"])
 
     start --> greet_and_route
     greet_and_route --> get_compound_info
@@ -75,6 +89,7 @@ flowchart TD
 
     search_patents --> summarize_and_restart
     summarize_and_restart --> greet_and_route
+
 ```
 
 ---

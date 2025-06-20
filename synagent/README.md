@@ -1,4 +1,3 @@
-Here's a more concise version of your `README.md`, keeping it professional and clear:
 
 ---
 
@@ -40,7 +39,7 @@ pip install rxnmapper
 ## 🧠 Usage
 
 ```bash
-python main.py.py 
+python main.py
 ```
 ---
 

@@ -39,7 +39,7 @@ pip install rxnmapper
 ## 🧠 Usage
 
 ```bash
-python main.py.py 
+python main.py
 ```
 ---
 

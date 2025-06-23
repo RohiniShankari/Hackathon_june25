@@ -155,7 +155,7 @@ def compare_gene_expression(ref_out, del_out, output_csv="outputs/delta_expressi
 
     return response
 
-def main(wt_file, delta_file, exon_start, exon_end, output_dir='/home/ubuntu/exon_deletion/outputs/api'):
+def main(wt_file, delta_file, exon_start, exon_end, output_dir='./outputs/api'):
 
     save_delta_png_path = os.path.join(output_dir,"delta_plot.png")
     save_tracks_png_path = os.path.join(output_dir,"tracks.png")

@@ -11,9 +11,9 @@ from tools.main_tools import retrieve_tools
 tools = retrieve_tools()
 
 def extract_paths_and_clean_output(text):
-    # Extract full file paths (e.g., /home/ubuntu/...)
-    paths = re.findall(r"/[\w./\-]+(?:\.vcf|\.csv|\.fasta|\.png)", text)
-
+    # Match both absolute and relative paths ending in valid extensions
+    pattern = r"(?:\.\/|\/)[\w\-/\.]+?\.(?:vcf|csv|fasta|png)"
+    paths = re.findall(pattern, text)
     return text, list(set(paths))
 
 def run_agent(input_prompt):
@@ -41,7 +41,8 @@ def run_agent(input_prompt):
     result = agent_executor.invoke({
         "input": input_prompt
     })
-
+    print("Agent Result:", result)
+    
     output_text, extracted_paths = extract_paths_and_clean_output(result["output"])
 
     print("Extracted Paths:", extracted_paths)
@@ -74,8 +75,8 @@ if __name__=="__main__":
     # prompt = "Delete exon from given sequence AAGTGTCTTTGCAGCTGTGGTGGCTCAGAGCAGGTCAGAGGCTCTGCTGTCTGTGTAGTGAGTGCAGTTGCCTTGAGTGACTCAGGGAAGAGGTGTAGTGAGGAAACAGGGGAGATCAGGTGTTTTCATGTTTGTGTGTTTGTTTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTGTTTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTCTGCTGTCCTGCTGTTTGTTGCTGTGTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTCTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTTGTTTT at positions 200 and 205"
     # prompt = "Delete exon from given fasta file at /home/ubuntu/exon_deletion/inputs/tp53.fasta and positions 200 and 205"
     # prompt = "Get exon coordinates of TP53 gene and predict splicing changes if exon at index 1 on chromosome 17 is deleted."
-    prompt = "Get exon coordinates of TP53 gene"
-    # prompt = "Predict splicing changes if exon at positions 7676521 and 7676594 on chromosome 17 is deleted."
+    # prompt = "Get exon coordinates of TP53 gene"
+    prompt = "Predict splicing changes if exon at positions 7676521 and 7676594 on chromosome 17 is deleted."
     # prompt = "Compare regulatory changes between WT and deleted exon sequence using Enformer. WT file is in '/home/ubuntu/exon_deletion/outputs/api/deleted_exon_WT.fasta', delta file is in '/home/ubuntu/exon_deletion/outputs/api/deleted_exon_DEL.fasta', and the exon spans 15000 to 15150."
     # prompt = "Compare regulatory changes using wt_file and delta_file"
     run_agent(prompt)

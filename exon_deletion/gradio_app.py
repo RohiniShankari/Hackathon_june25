@@ -2,6 +2,10 @@
 import gradio as gr
 import os
 from main import run_agent
+from pathlib import Path
+
+
+BASE_DIR = Path(__file__).resolve().parent
 
 def process_prompt(user_prompt, wt_file=None, delta_file=None):
     # Handle file uploads and insert paths into the prompt
@@ -20,11 +24,13 @@ def process_prompt(user_prompt, wt_file=None, delta_file=None):
 
     downloads = []
     for fpath in paths:
+        fpath = os.path.join(BASE_DIR, fpath)  # Ensure full path
         if os.path.exists(fpath):
             downloads.append(fpath)
     
     image_files = []
     for img_path in paths:
+        img_path = os.path.join(BASE_DIR, img_path)
         if os.path.exists(img_path) and img_path.endswith('.png'):
             image_files.append(img_path)  # gr.Image accepts file path directly
 
@@ -85,4 +91,5 @@ with gr.Blocks(theme=gr.themes.Soft(primary_hue="purple", secondary_hue="cyan"))
     )
 
 if __name__ == "__main__":
+    print("Starting Gradio app...")
     demo.launch(server_port=7861, share=True)

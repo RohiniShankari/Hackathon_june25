@@ -30,6 +30,10 @@ venv/
 
 # Data & output files
 data/
+*.png
+*.jpg
+*.csv
+*.vcf
 
 # AWS credentials or secrets (never commit)
 *.pem

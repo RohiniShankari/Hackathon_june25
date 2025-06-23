@@ -129,11 +129,11 @@ def main(
     chrom,
     exon_start,
     exon_end,
-    output_dir="/home/ubuntu/exon_deletion/outputs/api"
+    output_dir="./outputs/api"
 ):
     # output_dir = os.path.join(output_base_dir, os.path.basename(gene_name).split(".")[0])
     os.makedirs(output_dir, exist_ok=True)
-    ref_genome = "/home/ubuntu/exon_deletion/data/hg38.fa"
+    ref_genome = "./data/hg38.fa"
     # # Load gene sequence
     # wt_seq = SeqIO.read(wt_file, "fasta").seq
     # delta_seq = SeqIO.read(delta_file, "fasta").seq

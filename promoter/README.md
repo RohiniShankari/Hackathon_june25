@@ -8,7 +8,7 @@ This project implements a neural network-based agent to **generate synthetic pro
 
 - 🧬 Uses a trained autoencoder to generate promoter sequences.
 - 🧪 Supports query-driven generation with optional wet lab suggestions.
-- 🔍 (Optional) Integrates with LLMs like Claude to search and summarize scientific literature.
-- 📦 Provided as Jupyter notebooks for easy experimentation and modification.
+- 🔍Integrates with LLMs like Claude to search and summarize scientific literature.
+
 
 ---

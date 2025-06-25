@@ -12,3 +12,9 @@ This project implements a neural network-based agent to **generate synthetic pro
 
 
 ---
+## 📦 Setup
+
+```bash
+git clone https://github.com/boltzmannlabs/Hackathon_june25.git
+cd promoter
+-run the promoter.ipynb
